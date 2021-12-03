@@ -104,6 +104,11 @@ h1 span {
 }
 
 .btn:hover {
+  background-color: var(--light-grayish-cyan-1);
+  color: var(--very-dark-cyan);
+}
+
+.btn.active {
   background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
 }

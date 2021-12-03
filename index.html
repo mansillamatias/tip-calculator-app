@@ -10,30 +10,31 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="./js/app.js" defer></script>
 
 </head>
 <body>
   <main>
     <h1>SPLI <span>TTER</span></h1>
 
-    <section class="section">
+    <section class="section" id="section">
 
         <div class="bill">
           <p>Bill</p>
           <div class="input">
             <img src="./images/icon-dollar.svg" alt="">
-            <input type="number" placeholder="0" step="0.01" required>
+            <input id="bill" type="number" placeholder="0" step="0.01" min="0" required>
           </div>
         </div>
 
         <div class="tip">
           <p>Select Tip %</p>
-          <div class="tip-buttons">
-            <button class="btn">5%</button>
-            <button class="btn">10%</button>
-            <button class="btn">15%</button>
-            <button class="btn">25%</button>
-            <button class="btn">50%</button>
+          <div class="tip-buttons" id="tip">
+            <button class="btn" value="5">5%</button>
+            <button class="btn" value="10">10%</button>
+            <button class="btn" value="15">15%</button>
+            <button class="btn" value="25">25%</button>
+            <button class="btn" value="50">50%</button>
             <div class="input">
               <input type="number" placeholder="Custom"></input>
             </div>
@@ -44,7 +45,7 @@
           <p>Number of People</p>
           <div class="input">
             <img src="./images/icon-person.svg" alt="">
-            <input type="number" placeholder="0" required min="1">
+            <input id="people" type="number" placeholder="0" required min="1">
           </div>
         </div>
 
@@ -54,7 +55,7 @@
               <p>Tip Amount</p>
               <span>/ person</span>
             </div>
-            <div class="amount-number">$4.27</div>
+            <div class="amount-number" id="tip-amount">$0</div>
           </div>
 
           <div class="amount-content">
@@ -62,10 +63,9 @@
               <p>Total</p>
               <span>/ person</span>
             </div>
-            <div class="amount-number">$32.79</div>
+            <div class="amount-number" id="total">$0</div>
           </div>
-
-          <button class="btn btn-reset">Reset</button>
+          <button class="btn btn-reset" id="reset">Reset</button>
         </div>
 
     </section>
