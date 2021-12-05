@@ -5,8 +5,8 @@
   --dark-grayish-cyan-2: hsl(184, 14%, 56%);
   --light-grayish-cyan-1: hsl(185, 41%, 84%);
   --light-grayish-cyan-2: hsl(189, 41%, 97%);
-  --white: hsl(0, 0%, 100%)
-
+  --orange: rgb(213, 115, 91);
+  --white: hsl(0, 0%, 100%);
 }
 
 html {
@@ -84,6 +84,19 @@ h1 span {
   text-align: right;
 }
 
+.number-people span{
+  opacity: 0;
+}
+
+.number-people-zero p span {
+    opacity: 1;
+    color: var(--orange);
+}
+
+.number-people-zero div {
+  border: 2px solid var(--orange);
+}
+
 .tip-buttons{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -134,6 +147,11 @@ h1 span {
 
 .btn-reset:hover {
   background-color: var(--light-grayish-cyan-1);
+}
+
+.btn-reset:disabled {
+  opacity: 0.1;
+  cursor: not-allowed;
 }
 
 .amount {
